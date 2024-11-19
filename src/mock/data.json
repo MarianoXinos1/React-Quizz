@@ -1,0 +1,183 @@
+[
+    {
+      "id": 1,
+      "question": "What is the output of this code?",
+      "code": "console.log(typeof React)",
+      "answers": [
+        "undefined",
+        "object",
+        "function",
+        "symbol"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 2,
+      "question": "What does the useState hook do in React?",
+      "code": "const [state, setState] = useState(0);",
+      "answers": [
+        "It allows creating state in a functional component",
+        "It updates the global state of the application",
+        "It creates a mutable reference",
+        "It is a function to render components"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 3,
+      "question": "What is JSX in React?",
+      "code": "const element = <h1>Hello, world!</h1>;",
+      "answers": [
+        "A programming language",
+        "A function to create components",
+        "A JavaScript syntax extension",
+        "A library for state management"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": 4,
+      "question": "How do you render a component in React?",
+      "code": "ReactDOM.render(<App />, document.getElementById('root'));",
+      "answers": [
+        "React.render(<App />, root);",
+        "ReactDOM.render(<App />);",
+        "ReactDOM.render(<App />, root);",
+        "React.createElement(App, root);"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": 5,
+      "question": "What does the useEffect hook do in React?",
+      "code": "useEffect(() => { console.log('Component mounted'); }, []);",
+      "answers": [
+        "It runs after each render",
+        "It creates state within the component",
+        "It forces the component to re-render",
+        "It allows direct manipulation of the DOM"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 6,
+      "question": "How do you define a functional component in React?",
+      "code": "function MyComponent() { return <h1>Hello!</h1>; }",
+      "answers": [
+        "Using a class that extends React.Component",
+        "Using a function that returns JSX",
+        "Using the useState hook",
+        "None of the above"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 7,
+      "question": "What is a 'prop' in React?",
+      "code": "function Welcome(props) { return <h1>Hello, {props.name}</h1>; }",
+      "answers": [
+        "An internal variable of the component",
+        "A configuration parameter for a component",
+        "A global state",
+        "A function to change the state"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 8,
+      "question": "How do you update the state in a class component in React?",
+      "code": "this.setState({ counter: this.state.counter + 1 });",
+      "answers": [
+        "Using useState()",
+        "Using this.setState()",
+        "Modifying the state directly",
+        "Using useEffect()"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 9,
+      "question": "What is the difference between a class component and a functional component in React?",
+      "code": "class MyComponent extends React.Component { render() { return <div>Hello!</div>; } }",
+      "answers": [
+        "Class components use the useState hook, while functional components do not",
+        "Class components can have state and lifecycle methods, while functional components cannot",
+        "Functional components must always be invoked as functions",
+        "There is no difference"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 10,
+      "question": "What does the spread operator '...' do in React?",
+      "code": "const obj = { ...props };",
+      "answers": [
+        "It creates a shallow copy of an object or array",
+        "It binds functions",
+        "It spreads the global state across all components",
+        "It concatenates two arrays"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 11,
+      "question": "How can you prevent a React component from re-rendering unnecessarily?",
+      "code": "React.memo(MyComponent);",
+      "answers": [
+        "Using shouldComponentUpdate in class components",
+        "Using React.memo in functional components",
+        "Using setState correctly",
+        "None of the above"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 12,
+      "question": "What is a 'key' in a list of elements in React?",
+      "code": "<ul>{items.map(item => <li key={item.id}>{item.name}</li>)}</ul>",
+      "answers": [
+        "A property that helps uniquely identify each item",
+        "A unique identifier for the component",
+        "The name of the component's property",
+        "A function that returns a unique value"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 13,
+      "question": "How are events handled in React?",
+      "code": "<button onClick={this.handleClick}>Click me</button>",
+      "answers": [
+        "Using native JavaScript event handlers",
+        "Assigned as functions within the components",
+        "They must be bound using .bind() in class methods",
+        "All of the above"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": 14,
+      "question": "What is React Router?",
+      "code": "import { BrowserRouter as Router, Route } from 'react-router-dom';",
+      "answers": [
+        "A library to manage application state",
+        "A tool to make HTTP requests",
+        "A library to handle routing and navigation in a SPA",
+        "An extension to optimize performance"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": 15,
+      "question": "How do you pass a function as a prop in React?",
+      "code": "<ChildComponent onClick={this.handleClick} />",
+      "answers": [
+        "Using the useEffect hook",
+        "Directly placing the function inside the component",
+        "Passing the function as a property value",
+        "Using React context"
+      ],
+      "correctAnswer": 2
+    }
+  ]
+  
