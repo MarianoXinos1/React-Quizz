@@ -1,7 +1,8 @@
-import {Card, List, ListItem, ListItemButton, ListItemText } from "@mui/material";
+import {Card, List, ListItem, ListItemButton, ListItemText, Stack, IconButton } from "@mui/material";
+import { ArrowBackIosNew, ArrowForwardIos } from "@mui/icons-material";
 import { useQuestionStore } from "./store/questions";
 import {  type Question as QuestionType } from "./types";
-
+import {Footer} from './Footer'
 
 
 // sx = propiedad de mui para darle style al componente.
@@ -53,12 +54,40 @@ const Question = ({info}: {info: QuestionType}) => {
 }
 
 export const Game = () => {
-    const questions = useQuestionStore(state => state.questions)
-    const currentQuestion = useQuestionStore(state => state.currentQuestion)
+    // ya sea por desestructuracion o esta funcion de seleccion, es lo mismo. En ambas hay que poner parametro para que zustand sepa que parte proporcionar.
+    const questions = useQuestionStore(state => state.questions);
+    const currentQuestion = useQuestionStore(state => state.currentQuestion);
+    const goNextQuestion = useQuestionStore(state => state.goNextQuestion);
+    const goPreviousQuestion = useQuestionStore(state => state.goPreviousQuestion);
 
-    const questionInfo = questions[currentQuestion]
+    const questionInfo = questions[currentQuestion];
 
-        return(
+    // Casi todos estos componentes son de mui
+    return (
+        <>
+            <Stack direction='row' gap={2} alignItems='center' justifyContent='center'>
+                <IconButton 
+                    onClick={goPreviousQuestion} 
+                    disabled={currentQuestion === 0 } 
+                    sx={{ color: '#0d93ac', '&:focus': { outline: 'none' } }}
+                >
+                    <ArrowBackIosNew />
+                </IconButton>
+
+                <span style={{ color: 'white' }} >
+                     {currentQuestion + 1} / {questions.length} 
+                </span>
+
+                <IconButton 
+                    onClick={goNextQuestion} 
+                    disabled={currentQuestion >= questions.length -1}
+                    sx={{ color: '#0d93ac', '&:focus': { outline: 'none' } }}
+                >
+                    <ArrowForwardIos />
+                </IconButton>
+            </Stack>
             <Question info={questionInfo} />
-        )
+            <Footer/>
+        </>
+    )
 }
