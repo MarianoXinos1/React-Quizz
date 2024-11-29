@@ -3,6 +3,7 @@ import { ArrowBackIosNew, ArrowForwardIos } from "@mui/icons-material";
 import { useQuestionStore } from "./store/questions";
 import {  type Question as QuestionType } from "./types";
 import {Footer} from './Footer'
+import 'animate.css'
 
 
 // sx = propiedad de mui para darle style al componente.
@@ -31,7 +32,9 @@ const Question = ({info}: {info: QuestionType}) => {
 
     return (
         <Card variant= 'outlined' sx={{ p: 4, backgroundColor: 'white'}}>   
-            <h4>{info.question}</h4>
+            <h3 className="animate__animated animate__bounceInRight">
+                {info.question}
+            </h3>
             <div>{info.code}</div>
 
             <List sx={{ backgroundColor: '#fff', border:'1px solid #e0e0e0', marginTop: 2}}>
@@ -65,7 +68,7 @@ export const Game = () => {
     // Casi todos estos componentes son de mui
     return (
         <>
-            <Stack direction='row' gap={2} alignItems='center' justifyContent='center'>
+            <Stack direction='row' gap={2} alignItems='center' justifyContent='center' sx={{ mb: 1 }}>
                 <IconButton 
                     onClick={goPreviousQuestion} 
                     disabled={currentQuestion === 0 } 
@@ -86,7 +89,7 @@ export const Game = () => {
                     <ArrowForwardIos />
                 </IconButton>
             </Stack>
-            <Question info={questionInfo} />
+            <Question info={questionInfo}  />
             <Footer/>
         </>
     )

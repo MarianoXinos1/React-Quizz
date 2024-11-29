@@ -338,7 +338,7 @@
   },
   {
     "id": 30,
-    "question": "When would you use the `useReducer` hook instead of `useState`?",
+    "question": "When would you use the useReducer hook instead of useState?",
     "code": "",
     "answers": [
       "When you want to replace Redux with a simpler alternative for global state management",
@@ -361,7 +361,5 @@
     "correctAnswer": 1  
   }
 
-
-
-  ]
+]
   
