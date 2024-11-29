@@ -18,7 +18,7 @@ console.log(questions);
         <Stack direction='row' gap={2} alignItems='center' justifyContent='center'>
           <ReactLogo />
           <h1 className="react-title animate__animated animate__tada">
-            React Quizz
+            React Quiz
           </h1>
         </Stack>
 
