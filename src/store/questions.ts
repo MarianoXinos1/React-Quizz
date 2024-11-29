@@ -18,7 +18,8 @@ export const useQuestionStore = create<State>((set, get) => {
         currentQuestion: 0,  //Posicion array Question (Game.tsx)
 
         fetchQuestion: async (limit: number) => {
-            const res = await fetch('http://localhost:5173/src/mock/data.json')
+            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3000 || http://localhost:5173/';
+            const res = await fetch(`${apiUrl}/src/mock/data.json`); //no saques /src porque no funciona si no.
             const json = await res.json()
           
             const questions = json.sort(() => Math.random() -0.5).slice(0,limit)
