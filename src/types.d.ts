@@ -7,3 +7,5 @@ export interface Question {
     userSelectedAnswer?: number;
     isCorrectUserAnswer?: boolean;
 }
+
+declare module 'canvas-confetti'
