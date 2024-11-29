@@ -37,9 +37,9 @@ const Question = ({info}: {info: QuestionType}) => {
             </h3>
             <div>{info.code}</div>
 
-            <List sx={{ backgroundColor: '#fff', border:'1px solid #e0e0e0', marginTop: 2}}>
+            <List sx={{ backgroundColor: '#fff', marginTop: 2}}>
                 {info.answers.map((answer, index) => (
-                    <ListItem key={index} sx={{ borderBottom: '1px solid #e0e0e0' }} >
+                    <ListItem key={index} sx={{ border: '1px solid #e0e0e0' }} >
                         <ListItemButton 
                             disabled={info.userSelectedAnswer != null} //disabled es una propiedad de mui
                             onClick={handleClick(index)}
